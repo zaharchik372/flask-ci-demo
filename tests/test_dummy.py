@@ -1,2 +1,13 @@
-def test_dummy():
-    assert 1 + 1 == 2
+# tests/test_dummy.py
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+from flask_app.app import app
+
+def test_index():
+    tester = app.test_client()
+    response = tester.get("/")
+    assert response.status_code == 200
+    assert "Привет" in response.data.decode('utf-8')
+
