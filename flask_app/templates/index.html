@@ -1,13 +1,67 @@
-<!-- templates/index.html -->
+<!-- flask_app/templates/index.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Hello from Flask</title>
+  <meta charset="UTF-8">
+  <title>Моё CI/CD-портфолио</title>
+  <style>
+    body {
+      margin: 0; padding: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: #f0f2f5;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+    .container {
+      background: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      max-width: 600px;
+    }
+    h1 {
+      margin-bottom: 16px;
+      color: #3b49df;
+      font-size: 2.5em;
+    }
+    p {
+      margin-bottom: 20px;
+      font-size: 1.1em;
+      line-height: 1.5;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #3b49df;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .btn:hover {
+      background: #2e37b8;
+    }
+    footer {
+      margin-top: 30px;
+      font-size: 0.9em;
+      color: #666;
+    }
+  </style>
 </head>
 <body>
-    <h1>Hello!</h1>
-    <p>This is rendered from a template.</p>
-    <h3>Its my CI/CD</h3>
+  <div class="container">
+    <h1>Привет, Захар!</h1>
+    <p>Это демонстрации CI/CD пайплайна: frontend на Flask, под управлением GitHub Actions, автодеплоем на сервер через Gunicorn и Nginx.</p>
+    <a href="#contact" class="btn">Связаться</a>
+    <footer>
+      Powered by Flask + GitHub CI/CD 🚀
+    </footer>
+  </div>
 </body>
 </html>
